@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Privacy Policy — PourMe</title>
-<meta name="description" content="PourMe's privacy policy: what we collect, why, and the choices you have.">
+<meta name="description" content="PourMe's privacy policy: what we collect, how it's used and shared, and the choices you have.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700&display=swap" rel="stylesheet">
@@ -34,10 +34,7 @@
   a:hover { text-decoration: underline; }
   a:focus-visible { outline: 2px solid var(--amber-bright); outline-offset: 3px; border-radius: 4px; }
   .wrap { max-width: 760px; margin: 0 auto; padding: 0 24px; }
-  nav.top {
-    display: flex; align-items: center; justify-content: space-between;
-    padding: 22px 0;
-  }
+  nav.top { display: flex; align-items: center; justify-content: space-between; padding: 22px 0; }
   .brand { display: flex; align-items: center; gap: 12px; color: var(--cream); }
   .brand-mark {
     width: 36px; height: 36px; border-radius: 8px;
@@ -51,15 +48,33 @@
     font-size: clamp(32px, 4.5vw, 42px); line-height: 1.1;
     margin-bottom: 8px;
   }
-  .updated { color: var(--cream-30); font-size: 14px; margin-bottom: 40px; }
+  .updated { color: var(--cream-30); font-size: 14px; margin-bottom: 36px; }
   h2 {
     font-family: var(--display); font-weight: 600; font-size: 24px;
     margin: 40px 0 12px;
   }
+  h3 { font-size: 17px; font-weight: 600; margin: 22px 0 8px; color: var(--cream); }
   p, ul { color: var(--cream-70); margin-bottom: 14px; }
   ul { padding-left: 22px; }
   li { margin-bottom: 8px; }
   strong { color: var(--cream); font-weight: 600; }
+  table {
+    width: 100%; border-collapse: collapse; margin: 18px 0 22px;
+    font-size: 15px; color: var(--cream-70);
+  }
+  th, td {
+    text-align: left; padding: 10px 12px;
+    border-bottom: 1px solid rgba(138, 75, 38, 0.35); vertical-align: top;
+  }
+  th { color: var(--cream); font-weight: 600; font-size: 14px; letter-spacing: 0.02em; }
+  .callout {
+    background: var(--oak-deep);
+    border: 1px solid rgba(138, 75, 38, 0.55);
+    border-radius: 14px;
+    padding: 20px 22px;
+    margin: 22px 0;
+  }
+  .callout p:last-child { margin-bottom: 0; }
   footer {
     border-top: 1px solid rgba(138, 75, 38, 0.4);
     padding: 30px 0 40px; font-size: 14px; color: var(--cream-30);
@@ -88,45 +103,107 @@
 <main>
   <div class="wrap">
     <h1>Privacy Policy</h1>
-    <p class="updated">Last updated: [DATE — set before publishing]</p>
+    <p class="updated">Last updated: August 9, 2026</p>
 
-    <p>PourMe is a whiskey tracking app made by PourMe LLC. This policy explains what information the app collects, why, and the choices you have. The short version: your data exists to run your account and the app's features, we don't sell it, and you can delete your account and its data from inside the app.</p>
+    <p>This policy explains what information PourMe collects, how we use it, who we share and sell it to, and the choices and rights you have. PourMe is operated by PourMe LLC ("PourMe," "we," "us").</p>
 
-    <h2>What we collect</h2>
+    <div class="callout">
+      <p><strong>The short version.</strong> We collect the account details and whiskey data you enter, plus device and advertising identifiers. We work with advertising partners, including Meta, to show you targeted ads. We also sell certain user data to whiskey producers, distilleries, and retailers. You can opt out of both, at any time, at no cost — see <a href="#your-rights">Your rights and choices</a>.</p>
+    </div>
+
+    <h2>1. Information we collect</h2>
+
+    <h3>Information you give us</h3>
     <ul>
-      <li><strong>Account information.</strong> When you sign in with Apple, we receive your name and email address (or Apple's private relay address if you choose to hide your email), along with a unique account identifier.</li>
-      <li><strong>Content you create.</strong> Bottles you add, reviews, scores, tasting notes, photos you attach, blind tasting flights, blend recipes, wishlist items, and collection details including fill levels and purchase prices you enter.</li>
-      <li><strong>Pricing signals.</strong> If you mark a purchase as "at retail," the price you entered contributes to anonymous, aggregated typical-retail estimates shown to other users. Prices are never shown to other users as yours.</li>
-      <li><strong>Usage and device data.</strong> Basic technical information needed to operate and troubleshoot the service, such as device type, app version, and crash data. [VERIFY: list any analytics SDKs in use before publishing.]</li>
+      <li><strong>Account information.</strong> When you sign in with Apple, we receive your name and email address (or Apple's private relay address if you choose to hide your email) and a unique account identifier.</li>
+      <li><strong>Content and collection data.</strong> Bottles you add, reviews, scores, tasting notes, photos, blind tasting flights, blend recipes, wishlist items, fill levels, purchase prices, and the stores where you bought bottles.</li>
+      <li><strong>Communications.</strong> Messages you send us, including support requests and content reports.</li>
     </ul>
 
-    <h2>What we don't do</h2>
+    <h3>Information collected automatically</h3>
     <ul>
-      <li>We do not sell your personal information.</li>
-      <li>We do not show ads or share your data with advertisers.</li>
-      <li>Label scanning runs entirely on your device using Apple's Vision framework. Photos you scan for bottle identification are not uploaded for that purpose.</li>
+      <li><strong>Device and identifier data.</strong> Device model, operating system version, app version, language, and advertising identifiers, including Apple's Identifier for Advertisers (IDFA) where you permit tracking.</li>
+      <li><strong>Usage data.</strong> Screens viewed, features used, in-app events, session timing, and crash and diagnostic data.</li>
+      <li><strong>Approximate location.</strong> Derived from the stores you tag and, where you grant permission, from your device, to support location-based features.</li>
     </ul>
 
-    <h2>How your content is shared</h2>
-    <p>You control the visibility of your reviews when you post them. Public reviews appear in the community feed with your profile name. Your purchase prices are private by default and are only visible to others if you choose to share them. Wishlists are private by default.</p>
-
-    <h2>Where data is stored</h2>
-    <p>PourMe runs on Google Firebase (Firestore, Firebase Authentication, and Cloud Storage), operated by Google LLC, which processes data on our behalf. Data is stored on Google's servers in the United States.</p>
-
-    <h2>Your choices</h2>
+    <h2>2. How we use information</h2>
     <ul>
-      <li><strong>Delete your account.</strong> You can delete your account and its associated data from inside the app (Settings → Delete Account). This removes your account information and content from our systems.</li>
-      <li><strong>Control visibility.</strong> Review visibility, price visibility, and wishlist visibility are all adjustable in Settings.</li>
-      <li><strong>Contact us.</strong> For questions or requests about your data, email <a href="mailto:contact@pourmellc.com">contact@pourmellc.com</a>.</li>
+      <li>To operate your account and the app's features.</li>
+      <li>To display and aggregate community content, including reviews and crowd-sourced typical-retail price estimates.</li>
+      <li>To measure app performance, diagnose problems, and improve the product.</li>
+      <li><strong>To deliver and measure advertising</strong>, including personalized and targeted advertising through third-party advertising partners.</li>
+      <li>To create data and insight products for whiskey producers, distilleries, and retailers, as described in section 4.</li>
+      <li>To comply with legal obligations and enforce our terms.</li>
     </ul>
 
-    <h2>Age</h2>
-    <p>PourMe is intended for people of legal drinking age in their region (21+ in the United States). The app is not directed at children, and we do not knowingly collect information from anyone under the legal drinking age.</p>
+    <h2>3. Advertising and tracking</h2>
+    <p>PourMe uses the <strong>Meta SDK</strong> (Facebook) to deliver and measure advertising. Through it, Meta may receive device and advertising identifiers, app events such as installs, sign-ups, and in-app actions, and related technical data. Meta may combine that information with data it holds about you from other apps and websites to personalize advertising inside and outside PourMe.</p>
+    <p>On iOS, we ask your permission before tracking you across apps and websites, using Apple's App Tracking Transparency prompt. <strong>If you decline, we do not access your IDFA or share identifiers for cross-app tracking.</strong> You can change this at any time in <em>Settings → Privacy &amp; Security → Tracking</em> on your device.</p>
+    <p>Meta acts as an independent controller for the data it receives, and its handling of that data is governed by <a href="https://www.facebook.com/privacy/policy/" rel="noopener">Meta's Privacy Policy</a>.</p>
 
-    <h2>Changes to this policy</h2>
-    <p>If this policy changes materially, we will update this page and note the new date above.</p>
+    <h2>4. Sharing and selling your information</h2>
 
-    <h2>Contact</h2>
+    <h3>Service providers</h3>
+    <p>PourMe runs on Google Firebase (Firestore, Firebase Authentication, and Cloud Storage), operated by Google LLC, which processes data on our behalf under contract. Data is stored on servers in the United States.</p>
+
+    <h3>Advertising partners</h3>
+    <p>As described in section 3, we share device identifiers and app event data with Meta for advertising purposes. Under California law this constitutes both a <strong>"sale"</strong> and <strong>"sharing for cross-context behavioral advertising."</strong></p>
+
+    <h3>Whiskey producers, distilleries, and retailers</h3>
+    <p>We sell user data to whiskey producers, distilleries, retailers, and their agents, who use it for market research, product development, and marketing. This may include your reviews and ratings, the bottles in your collection and wishlist, purchase prices and locations, tasting preferences, and associated identifiers.</p>
+    <p><strong>This is a sale of personal information under California law and comparable state privacy laws. You have the right to opt out at any time, at no cost, and we will not discriminate against you for exercising it.</strong> See <a href="#your-rights">Your rights and choices</a>.</p>
+
+    <h3>Other disclosures</h3>
+    <p>We may disclose information to comply with law or valid legal process, to protect the rights, safety, or property of PourMe, our users, or the public, and in connection with a merger, acquisition, or sale of assets, in which case we will notify you before your information becomes subject to a different policy.</p>
+
+    <h2>5. Public content</h2>
+    <p>You control the visibility of your reviews when you post them. Public reviews appear in the community feed with your profile name and may be visible to anyone using the app. Purchase prices are private by default and are only visible to others if you choose to share them. Wishlists are private by default.</p>
+
+    <h2 id="your-rights">6. Your rights and choices</h2>
+
+    <h3>Everyone</h3>
+    <ul>
+      <li><strong>Opt out of the sale and sharing of your data.</strong> Use the "Do Not Sell or Share My Personal Information" control in the app under <em>Settings → Privacy</em>, or email <a href="mailto:contact@pourmellc.com">contact@pourmellc.com</a>. This covers both advertising partners and producer data sales.</li>
+      <li><strong>Opt out of tracking.</strong> Decline the App Tracking Transparency prompt, or turn tracking off in your device settings.</li>
+      <li><strong>Delete your account.</strong> Delete your account and its data from inside the app at <em>Settings → Delete Account</em>. This is permanent.</li>
+      <li><strong>Control visibility.</strong> Review, price, and wishlist visibility are all adjustable in Settings.</li>
+    </ul>
+
+    <h3>California residents (CCPA/CPRA)</h3>
+    <p>In the past 12 months we have collected the categories of personal information described in section 1, and have sold or shared the categories below.</p>
+    <table>
+      <thead>
+        <tr><th>Category</th><th>Sold or shared with</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Identifiers (account ID, email, device and advertising identifiers)</td><td>Advertising partners; whiskey producers and retailers</td></tr>
+        <tr><td>Commercial information (purchases, prices, collection and wishlist data)</td><td>Whiskey producers and retailers</td></tr>
+        <tr><td>Internet or app activity (usage and event data)</td><td>Advertising partners</td></tr>
+        <tr><td>Inferences (taste and preference profiles)</td><td>Whiskey producers and retailers</td></tr>
+        <tr><td>Approximate geolocation</td><td>Whiskey producers and retailers</td></tr>
+      </tbody>
+    </table>
+    <p>You have the right to know what we collect and disclose, to request deletion or correction, to opt out of sale and sharing, to limit the use of sensitive personal information, and not to be discriminated against for exercising these rights. Submit requests in the app or by emailing <a href="mailto:contact@pourmellc.com">contact@pourmellc.com</a>. You may use an authorized agent; we will verify your identity before acting on a request.</p>
+    <p>We do not knowingly sell or share the personal information of consumers under 16 years of age.</p>
+
+    <h3>European Economic Area and UK residents (GDPR)</h3>
+    <p>Where GDPR applies, our legal bases are: <strong>contract</strong>, to operate your account and provide the app; <strong>consent</strong>, for personalized advertising and for the sale of data to producers, which we request separately and which you may withdraw at any time; <strong>legitimate interests</strong>, for security, fraud prevention, and product improvement; and <strong>legal obligation</strong>, where required by law.</p>
+    <p>You have the right to access, correct, delete, restrict, or object to processing of your personal data, the right to data portability, and the right to withdraw consent at any time without affecting processing carried out before withdrawal. You may lodge a complaint with your local supervisory authority. Data is transferred to and stored in the United States under Standard Contractual Clauses.</p>
+
+    <h2>7. Data retention</h2>
+    <p>We retain your account information and content while your account is active. When you delete your account, we delete or de-identify your personal information except where retention is required by law. Data already transferred to advertising partners or producers before an opt-out or deletion request is subject to their own retention practices; we will pass deletion requests on to them where the law requires.</p>
+
+    <h2>8. Security</h2>
+    <p>We use industry-standard measures, including encryption in transit and access controls, to protect your information. No method of transmission or storage is completely secure.</p>
+
+    <h2>9. Age</h2>
+    <p>PourMe is intended for people of legal drinking age in their jurisdiction (21+ in the United States). It is not directed at children, and we do not knowingly collect personal information from anyone under the legal drinking age. If we learn that we have, we will delete it.</p>
+
+    <h2>10. Changes to this policy</h2>
+    <p>If we make material changes, we will update the date above and notify you in the app before the changes take effect. Where the law requires consent for a change, we will ask for it.</p>
+
+    <h2>11. Contact</h2>
     <p>PourMe LLC<br><a href="mailto:contact@pourmellc.com">contact@pourmellc.com</a></p>
   </div>
 </main>
